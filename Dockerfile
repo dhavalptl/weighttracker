@@ -10,6 +10,7 @@ RUN npm install -g -s --no-progress yarn && \
     yarn cache clean
 
 ### STAGE2 : SETUP NGNIX AND PUT PROD REACTJS FILE INTO HTTP SERVER ###
+
 FROM nginx:1.12.1-alpine
 COPY nginx/default.conf /etc/nginx/conf.d/
 RUN rm -rf /usr/share/nginx/html/*
